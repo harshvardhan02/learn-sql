@@ -1,4 +1,4 @@
-# 📊 SQL Query Examples
+# 📊 SELECT Query Examples
 
 ## 1️⃣ Show all customers
 ```sql
