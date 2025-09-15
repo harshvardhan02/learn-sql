@@ -41,3 +41,30 @@ ORDER BY country ASC, score DESC
 | 15 | Deepak     | India   | 850   |
 | 9  | Kenji      | Japan   | 940   |
 | 3  | Yuki       | Japan   | 890   |
+
+SELECT 
+	country,
+    SUM(score) AS score
+FROM customers
+GROUP BY country
+
+| country | score |
+|---------|-------|
+| India   | 2300  |
+| Japan   | 1490  |
+| USA     | 1850  |
+| Brazil  | 920   |
+
+SELECT 
+	country,
+    SUM(score) AS score,
+    COUNT(id) AS total_customers
+FROM customers
+GROUP BY country
+
+| country | score | total_customers |
+|---------|-------|-----------------|
+| India   | 2300  | 15              |
+| Japan   | 1490  | 10              |
+| USA     | 1850  | 12              |
+| Brazil  | 920   | 6               |
