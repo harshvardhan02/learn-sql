@@ -14,34 +14,34 @@ From customers
 SELECT first_name, country
 From customers 
 
-| first_name | country |
-|------------|---------|
-| Arjun      | India   |
-| Maria      | Spain   |
-| Kenji      | Japan   |
+| First Name | Country |
+| ---------- | ------- |
+| Maria      | Germany |
+| John       | USA     |
+| Georg      | UK      |
+| Martin     | Germany |
+| Peter      | USA     |
 
 SELECT *
 From customers 
 WHERE Score > 500
 
-| Id | first_name | country | score |
-|----|------------|---------|-------|
-| 10 | Deepak     | India   | 520   |
-| 17 | Maria      | Brazil  | 801   |
-| 23 | Kenji      | Japan   | 650   |
+| Id | First Name | Country | Score |
+| -- | ---------- | ------- | ----- |
+| 2  | John       | USA     | 900   |
+| 3  | Georg      | UK      | 750   |
 
 SELECT *
 From customers 
 ORDER BY country ASC, score DESC
 
-| Id | first_name | country | score |
-|----|------------|---------|-------|
-| 4  | Sarah      | Canada  | 700   |
-| 12 | Ali        | Canada  | 650   |
-| 7  | Maria      | India   | 900   |
-| 15 | Deepak     | India   | 850   |
-| 9  | Kenji      | Japan   | 940   |
-| 3  | Yuki       | Japan   | 890   |
+| Id | First Name | Country | Score |
+| -- | ---------- | ------- | ----- |
+| 4  | Martin     | Germany | 500   |
+| 1  | Maria      | Germany | 350   |
+| 3  | Georg      | UK      | 750   |
+| 2  | John       | USA     | 900   |
+| 5  | Peter      | USA     | 0     |
 
 SELECT 
 	country,
@@ -49,12 +49,11 @@ SELECT
 FROM customers
 GROUP BY country
 
-| country | score |
-|---------|-------|
-| India   | 2300  |
-| Japan   | 1490  |
-| USA     | 1850  |
-| Brazil  | 920   |
+| Country | Score |
+| ------- | ----- |
+| Germany | 850   |
+| UK      | 750   |
+| USA     | 900   |
 
 SELECT 
 	country,
@@ -63,9 +62,8 @@ SELECT
 FROM customers
 GROUP BY country
 
-| country | score | total_customers |
-|---------|-------|-----------------|
-| India   | 2300  | 15              |
-| Japan   | 1490  | 10              |
-| USA     | 1850  | 12              |
-| Brazil  | 920   | 6               |
+| Country | Score | Total Customers |
+| ------- | ----- | --------------- |
+| Germany | 850   | 2               |
+| UK      | 750   | 1               |
+| USA     | 900   | 2               |
