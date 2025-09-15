@@ -19,6 +19,39 @@ Below is a sample dataset I’ll use for practicing queries:
 
 ---
 
+## 📖 Explanation of Clauses
+
+SELECT → columns or expressions to return
+
+FROM → table(s) where data comes from
+
+JOIN → combine rows from multiple tables
+
+WHERE → filter rows before grouping
+
+GROUP BY → group rows for aggregation
+
+HAVING → filter groups after aggregation
+
+ORDER BY → sort the result
+
+LIMIT / OFFSET → restrict number of rows returned
+
+## 🔢 SQL SELECT Query Clauses
+
+The typical sequence when writing a `SELECT` statement is:
+
+```sql
+SELECT column1, column2, aggregate_function(column3)
+FROM table_name
+JOIN other_table ON condition
+WHERE condition
+GROUP BY column1, column2
+HAVING aggregate_condition
+ORDER BY column1 [ASC|DESC]
+LIMIT number OFFSET number;
+```
+
 ## 🛠️ Example Query  
 
 ```sql
