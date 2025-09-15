@@ -46,4 +46,4 @@ VALUES
 (3, 'Georg', 'UK', 750),
 (4, 'Martin', 'Germany', 500),
 (5, 'Peter', 'USA', 0);
-,,,
+```
