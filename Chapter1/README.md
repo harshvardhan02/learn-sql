@@ -4,6 +4,7 @@
 ```sql
 SELECT *
 FROM customers;
+```
 
 | Id | First Name | Country  | Score |
 |----|------------|----------|-------|
