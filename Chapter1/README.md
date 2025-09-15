@@ -96,9 +96,11 @@ WHERE Score != 0
 GROUP BY country
 HAVING AVG(score) > 430
 ```
-country | score
---------+-------
-USA     | 900
-UK      | 750
+## Query Result
+
+| Country | Average Score |
+|---------|---------------|
+| USA     | 900           |
+| UK      | 750           |
 
 
