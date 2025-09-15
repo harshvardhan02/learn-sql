@@ -15,7 +15,7 @@ FROM customers;
 | 5  | Peter      | USA      | 0     |
 
 ---
-
+## 2️⃣ Select first_name and country
 ```sql
 SELECT first_name, country
 FROM customers;
@@ -28,6 +28,8 @@ FROM customers;
 | Martin     | Germany |
 | Peter      | USA     |
 
+---
+## 3️⃣ Customers with score > 500
 ```sql
 SELECT *
 FROM customers 
@@ -38,6 +40,8 @@ WHERE score > 500;
 | 2  | John       | USA     | 900   |
 | 3  | Georg      | UK      | 750   |
 
+---
+## 4️⃣ Order by country ASC, score DESC
 ```sql
 SELECT *
 FROM customers 
@@ -51,6 +55,8 @@ ORDER BY country ASC, score DESC;
 | 2  | John       | USA     | 900   |
 | 5  | Peter      | USA     | 0     |
 
+---
+## 5️⃣ Sum of scores by country
 ```sql
 SELECT 
     country,
@@ -64,7 +70,8 @@ GROUP BY country;
 | UK      | 750   |
 | USA     | 900   |
 
-
+---
+## 6️⃣ Sum of scores and total customers by country
 ```sql
 SELECT 
     country,
