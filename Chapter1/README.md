@@ -1,6 +1,6 @@
 ```sql
 SELECT *
-From customers
+From customers```
 
 | Id | first_name | country     | score |
 |----|------------|-------------|-------|
@@ -10,9 +10,9 @@ From customers
 | 4  | Sarah      | USA         | 92    |
 | 5  | Luca       | Italy       | 88    |
 
-
+```sql
 SELECT first_name, country
-From customers 
+From customers```
 
 | First Name | Country |
 | ---------- | ------- |
@@ -22,18 +22,20 @@ From customers
 | Martin     | Germany |
 | Peter      | USA     |
 
+```sql
 SELECT *
 From customers 
-WHERE Score > 500
+WHERE Score > 500```
 
 | Id | First Name | Country | Score |
 | -- | ---------- | ------- | ----- |
 | 2  | John       | USA     | 900   |
 | 3  | Georg      | UK      | 750   |
 
+```sql
 SELECT *
 From customers 
-ORDER BY country ASC, score DESC
+ORDER BY country ASC, score DESC```
 
 | Id | First Name | Country | Score |
 | -- | ---------- | ------- | ----- |
@@ -43,11 +45,12 @@ ORDER BY country ASC, score DESC
 | 2  | John       | USA     | 900   |
 | 5  | Peter      | USA     | 0     |
 
+```sql
 SELECT 
 	country,
     SUM(score) AS score
 FROM customers
-GROUP BY country
+GROUP BY country```
 
 | Country | Score |
 | ------- | ----- |
@@ -55,12 +58,13 @@ GROUP BY country
 | UK      | 750   |
 | USA     | 900   |
 
+```sql
 SELECT 
 	country,
     SUM(score) AS score,
     COUNT(id) AS total_customers
 FROM customers
-GROUP BY country
+GROUP BY country```
 
 | Country | Score | Total Customers |
 | ------- | ----- | --------------- |
