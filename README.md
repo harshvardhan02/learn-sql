@@ -18,3 +18,13 @@ From customers
 | Arjun      | India   |
 | Maria      | Spain   |
 | Kenji      | Japan   |
+
+SELECT *
+From customers 
+WHERE Score > 500
+
+| Id | first_name | country | score |
+|----|------------|---------|-------|
+| 10 | Deepak     | India   | 520   |
+| 17 | Maria      | Brazil  | 801   |
+| 23 | Kenji      | Japan   | 650   |
