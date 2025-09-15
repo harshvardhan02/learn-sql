@@ -6,7 +6,7 @@ SELECT *
 FROM customers;
 
 | Id | first\_name | country | score |
-| -- | ----------- | ------- | ----- |
+|----|-------------|---------|-------|
 | 1  | Arjun       | India   | 85    |
 | 2  | Maria       | Spain   | 90    |
 | 3  | Kenji       | Japan   | 78    |
