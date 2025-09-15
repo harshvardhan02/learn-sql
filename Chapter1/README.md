@@ -87,6 +87,7 @@ GROUP BY country;
 | USA     | 900   | 2               |
 
 ---
+## 7️⃣ Average Score by Country (Excluding Zero Scores)
 ```sql
 SELECT 
     country,
