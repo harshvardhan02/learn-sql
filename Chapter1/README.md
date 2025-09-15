@@ -86,4 +86,19 @@ GROUP BY country;
 | UK      | 750   | 1               |
 | USA     | 900   | 2               |
 
+---
+```sql
+SELECT 
+    country,
+    AVG(score) AS score
+FROM Players
+WHERE Score != 0
+GROUP BY country
+HAVING AVG(score) > 430
+```
+country | score
+--------+-------
+USA     | 900
+UK      | 750
+
 
