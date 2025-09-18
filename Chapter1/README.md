@@ -125,8 +125,20 @@ FROM Players;
 ```sql
 SELECT TOP 2 *
 FROM Players;
-````
+```
 | Id | FirstName | Country | Score |
 | -- | --------- | ------- | ----- |
 | 1  | Maria     | Germany | 350   |
 | 2  | John      | USA     | 900   |
+---
+```sql
+SELECT TOP 2 *
+FROM Players
+ORDER BY score DESC;
+```
+### 👉 This will return the top 2 players with the highest scores (because of ORDER BY score DESC).
+
+| Id | FirstName | Country | Score |
+| -- | --------- | ------- | ----- |
+| 2  | John      | USA     | 900   |
+| 3  | Georg     | UK      | 750   |
