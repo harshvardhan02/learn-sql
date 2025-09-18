@@ -110,7 +110,7 @@ HAVING AVG(score) > 430
 ```sql
 SELECT DISTINCT score 
 FROM Players;
-````
+```
 | Score |
 |-------|
 | 0     |
@@ -118,3 +118,15 @@ FROM Players;
 | 500   |
 | 750   |
 | 900   |
+
+---
+## TOP
+### 👉 This will return only the first 2 rows from the Players table.
+```sql
+SELECT TOP 2 *
+FROM Players;
+````
+| Id | FirstName | Country | Score |
+| -- | --------- | ------- | ----- |
+| 1  | Maria     | Germany | 350   |
+| 2  | John      | USA     | 900   |
