@@ -104,4 +104,17 @@ HAVING AVG(score) > 430
 | USA     | 900           |
 | UK      | 750           |
 
-
+---
+## DISTINCT
+### 👉 This will return all unique score values from the Players table.
+```sql
+SELECT DISTINCT score 
+FROM Players;
+````
+| Score |
+|-------|
+| 0     |
+| 350   |
+| 500   |
+| 750   |
+| 900   |
