@@ -130,7 +130,9 @@ FROM Players;
 | -- | --------- | ------- | ----- |
 | 1  | Maria     | Germany | 350   |
 | 2  | John      | USA     | 900   |
+
 ---
+
 ```sql
 SELECT TOP 2 *
 FROM Players
@@ -142,3 +144,18 @@ ORDER BY score DESC;
 | -- | --------- | ------- | ----- |
 | 2  | John      | USA     | 900   |
 | 3  | Georg     | UK      | 750   |
+
+---
+
+### 👉 Example 2: Return the first 3 rows from the Orders table sorted by order_date in ascending order
+
+```sql
+SELECT TOP 3 *
+FROM Orders
+ORDER BY order_date ASC;
+```
+| order_id | customer_id | order_date | sales  |
+| -------- | ----------- | ---------- | ------ |
+| 1        | 101         | 2024-01-05 | 120.00 |
+| 2        | 103         | 2024-01-10 | 89.50  |
+| 3        | 102         | 2024-01-12 | 42.00  |
