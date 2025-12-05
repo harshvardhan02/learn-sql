@@ -1,4 +1,6 @@
 # 📐 Data Definition Language
+
+1️⃣ Example query to create table.
 ```sql
 CREATE TABLE dbo.Persons
 (
@@ -8,3 +10,13 @@ CREATE TABLE dbo.Persons
     phone       VARCHAR(20) NULL               -- phone number
 );
 ```
+| PersonID | Person Name   | Birth Date | Phone         |
+| -------- | ------------- | ---------- | ------------- |
+| 1        | Asha Verma    | 1990-04-12 | +919876543210 |
+| 2        | John Doe      | 1985-11-20 | NULL          |
+| 3        | Sara Khan     | 2000-01-05 | +447911123456 |
+| 4        | Michael Smith | 1992-09-30 | +12125550123  |
+| 5        | Emily Johnson | 1998-06-15 | NULL          |
+
+---
+
