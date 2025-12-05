@@ -142,6 +142,90 @@ WHERE birth_date NOT BETWEEN '1990-01-01' AND '2000-12-31';
 | `IN`     | Matches any value **in a list**      |
 | `NOT IN` | True if value is **not in the list** |
 
+# 🟪 **SQL Membership Operators**
+
+Membership operators let you check whether a value **exists inside a list** of values.
+
+| Category | Operators |
+|---------|-----------|
+| 🟪 **Membership Operators** | `IN`, `NOT IN` |
+
+---
+
+# 📘 **Detailed Explanation + Examples (Using `persons` Table)**
+
+Assume your table:
+
+```sql
+persons(id, person_name, birth_date, phone)
+```
+
+---
+
+## 🟪 **1. IN Operator**
+
+🔹 **Meaning:**  
+Returns rows where a value **matches any value in a list**.
+
+### ✅ Example 1: Select people whose IDs are **1, 3, or 5**
+
+```sql
+SELECT *
+FROM persons
+WHERE id IN (1, 3, 5);
+```
+
+---
+
+### ✅ Example 2: Find people whose names are in a specific list
+
+```sql
+SELECT *
+FROM persons
+WHERE person_name IN ('Asha Verma', 'Sara Khan');
+```
+
+---
+
+## 🟪 **2. NOT IN Operator**
+
+🔹 **Meaning:**  
+Returns rows where a value **does NOT match any value** in the list.
+
+### ✅ Example 3: Exclude certain people by ID
+
+```sql
+SELECT *
+FROM persons
+WHERE id NOT IN (2, 4);
+```
+
+✔ Returns all persons **except** ID 2 and 4
+
+---
+
+### ✅ Example 4: People whose name is **not** one of the given values
+
+```sql
+SELECT *
+FROM persons
+WHERE person_name NOT IN ('John Doe', 'Emily Johnson');
+```
+
+---
+
+# 🌟 Bonus Example: Combine with Logical Operators
+
+### People who have a phone number *AND* whose ID is in a specific list:
+
+```sql
+SELECT *
+FROM persons
+WHERE phone IS NOT NULL
+  AND id IN (1, 3, 4);
+```
+
+
 ---
 ### 🟧 Search Operator
 | Operator | Meaning                            |
