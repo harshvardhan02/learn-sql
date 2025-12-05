@@ -2,13 +2,13 @@
 
 1️⃣ Example query to create table.
 ```sql
-CREATE TABLE dbo.Persons
-(
-    PersonID    INT IDENTITY(1,1) PRIMARY KEY, -- auto-increment primary key
-    person_name NVARCHAR(100) NOT NULL,        -- person's full name
-    birth_date  DATE NULL,                     -- date of birth
-    phone       VARCHAR(20) NULL               -- phone number
-);
+CREATE TABLE persons (
+	id INT NOT NULL,
+  person_name VARCHAR(50) NOT NULL,
+  birth_date DATE,
+  phone VARCHAR(15) NOT NULL,
+  CONSTRAINT pk_persons PRIMARY KEY (id)
+)
 ```
 | PersonID | Person Name   | Birth Date | Phone         |
 | -------- | ------------- | ---------- | ------------- |
