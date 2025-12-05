@@ -225,10 +225,103 @@ WHERE phone IS NOT NULL
   AND id IN (1, 3, 4);
 ```
 
-
 ---
 ### 🟧 Search Operator
 | Operator | Meaning                            |
 | -------- | ---------------------------------- |
 | `LIKE`   | Pattern matching using `%` and `_` |
 
+# 🟧 **SQL Search Operator — Color Themed Guide**
+
+Search operators allow pattern matching using wildcards like `%` and `_`.
+
+| Category | Operator |
+|---------|----------|
+| 🟧 **Search Operator** | `LIKE` |
+
+---
+
+# 📘 **Detailed Explanation + Examples (Using `persons` Table)**
+
+Assume your table:
+
+```sql
+persons(id, person_name, birth_date, phone)
+```
+
+---
+
+## 🟧 **1. LIKE Operator**
+
+🔹 **Meaning:**  
+Used for **pattern matching** in strings.  
+Uses two common wildcards:
+
+| Wildcard | Meaning |
+|----------|---------|
+| `%` | Matches *zero or more* characters |
+| `_` | Matches *exactly one* character |
+
+---
+
+## 🔍 Example Queries
+
+### ✅ Example 1: Names that **start with 'A'**
+
+```sql
+SELECT *
+FROM persons
+WHERE person_name LIKE 'A%';
+```
+
+---
+
+### ✅ Example 2: Names that **end with 'n'**
+
+```sql
+SELECT *
+FROM persons
+WHERE person_name LIKE '%n';
+```
+
+---
+
+### ✅ Example 3: Names that **contain 'er'**
+
+```sql
+SELECT *
+FROM persons
+WHERE person_name LIKE '%er%';
+```
+
+---
+
+### ✅ Example 4: Phone numbers that start with **+91**
+
+```sql
+SELECT *
+FROM persons
+WHERE phone LIKE '+91%';
+```
+
+---
+
+### ✅ Example 5: Names with exactly **5 characters before** 'a'
+
+```sql
+SELECT *
+FROM persons
+WHERE person_name LIKE '_____a%';
+```
+
+---
+
+# 🌟 Bonus: Case-Insensitive Search (MySQL Default)
+
+MySQL searches using `LIKE` are **case-insensitive** for most collations.
+
+```sql
+SELECT *
+FROM persons
+WHERE person_name LIKE '%michael%';
+```
