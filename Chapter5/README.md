@@ -94,7 +94,47 @@ WHERE phone IS NOT NULL
 | Operator  | Meaning                                       |
 | --------- | --------------------------------------------- |
 | `BETWEEN` | Selects values **within a range** (inclusive) |
+### 🟫 SQL Range Operator
+Range operators help filter data between two values.
+SQL provides one primary range operator:
+| Category              | Operator  |
+| --------------------- | --------- |
+| 🟫 **Range Operator** | `BETWEEN` |
 
+### 🔹 Meaning:
+Selects values within a specified range, and both boundaries are included.
+
+#### ✅ Example 1: People born between 1990 and 2000
+```sql
+SELECT *
+FROM persons
+WHERE birth_date BETWEEN '1990-01-01' AND '2000-12-31';
+```
+✔ Includes values on both ends
+✔ '1990-01-01' and '2000-12-31' are included
+
+#### ✅ Example 2: People with PersonID between 2 and 4
+```sql
+SELECT *
+FROM persons
+WHERE id BETWEEN 2 AND 4;
+```
+✔ Returns rows with IDs: 2, 3, 4
+
+#### ✅ Example 3: People whose name alphabetically falls between 'A' and 'M'
+```sql
+SELECT *
+FROM persons
+WHERE person_name BETWEEN 'A' AND 'M';
+```
+✔ Useful for alphabetical filtering
+
+#### 🛑 NOT BETWEEN (Advanced)
+```sql
+SELECT *
+FROM persons
+WHERE birth_date NOT BETWEEN '1990-01-01' AND '2000-12-31';
+```
 ---
 ### 🟪 Membership Operators
 | Operator | Meaning                              |
