@@ -20,3 +20,11 @@ CREATE TABLE dbo.Persons
 
 ---
 
+# Insert sample rows
+```sql
+INSERT INTO dbo.Persons (person_name, birth_date, phone)
+VALUES
+('Asha Verma',  '1990-04-12', '+919876543210'),
+('John Doe',    '1985-11-20', NULL),
+('Sara Khan',   '2000-01-05', '+447911123456');
+```
