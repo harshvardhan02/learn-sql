@@ -80,3 +80,8 @@ VALUES
 (4, 'Martin', 'Germany', 500),
 (5, 'Peter', 'USA', 0);
 ```
+
+## Drop Table Query
+```sql
+DROP TABLE IF EXISTS persons;
+```

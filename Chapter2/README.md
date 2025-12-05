@@ -3,7 +3,7 @@
 1️⃣ Example query to create table.
 ```sql
 CREATE TABLE persons (
-	id INT NOT NULL,
+	id INT NOT NULL AUTO_INCREMENT, -- AUTO_INCREMENT will create sys gen id.
   person_name VARCHAR(50) NOT NULL,
   birth_date DATE,
   phone VARCHAR(15) NOT NULL,
@@ -20,11 +20,28 @@ CREATE TABLE persons (
 
 ---
 
-# Insert sample rows
+## Insert sample rows
 ```sql
-INSERT INTO dbo.Persons (person_name, birth_date, phone)
+INSERT INTO persons (person_name, birth_date, phone)
 VALUES
-('Asha Verma',  '1990-04-12', '+919876543210'),
-('John Doe',    '1985-11-20', NULL),
-('Sara Khan',   '2000-01-05', '+447911123456');
+('Harsh Singh', '1990-03-02', '9822356789'), 
+('Anjali Singh', '1990-02-05', '9822356389');
+```
+
+---
+
+## ALTER - ADD
+### add a new column called email to the person table
+```sql
+ALTER TABLE persons
+ADD email VARCHAR(50) NOT NULL;
+```
+
+---
+
+## ALTER - DROP
+### Remove the column phone from the persons table
+```sql
+ALTER TABLE persons
+DROP phone;
 ```
