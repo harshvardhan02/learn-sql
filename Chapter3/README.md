@@ -9,6 +9,19 @@ CREATE TABLE persons (
   phone VARCHAR(15) NOT NULL,
   CONSTRAINT pk_persons PRIMARY KEY (id)
 )
+
+CREATE TABLE persons (
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, -- AUTO_INCREMENT will create sys gen id.
+  person_name VARCHAR(50) NOT NULL,
+  birth_date DATE,
+  phone VARCHAR(15) NOT NULL,
+)
+
+### 🔍 Auto-increment Difference
+| Feature                | SSMS (SQL Server) | MySQL Workbench  |
+| ---------------------- | ----------------- | ---------------- |
+| Auto-increment keyword | `IDENTITY(1,1)`   | `AUTO_INCREMENT` |
+
 ```
 | PersonID | Person Name   | Birth Date | Phone         |
 | -------- | ------------- | ---------- | ------------- |
@@ -45,3 +58,5 @@ ADD email VARCHAR(50) NOT NULL;
 ALTER TABLE persons
 DROP phone;
 ```
+
+17:01:24	UPDATE grocery  SET Brand = 'Dawat' WHERE FSNs = 'HDSJ'	Error Code: 1175. You are using safe update mode and you tried to update a table without a WHERE that uses a KEY column.  To disable safe mode, toggle the option in Preferences -> SQL Editor and reconnect.	0.00085 sec
