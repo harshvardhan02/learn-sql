@@ -260,3 +260,75 @@ RIGHT JOIN orders o
 </tbody>
 </table>
 </div>
+
+---
+
+# ✅ Query (FULL ANTI JOIN)
+
+```sql
+SELECT 
+  *
+FROM customers c
+LEFT JOIN orders o
+ ON c.id = o.customer_id
+ WHERE o.customer_id IS NULL
+
+UNION
+
+SELECT
+  *
+FROM customers c
+RIGHT JOIN orders o
+ ON c.id = o.customer_id
+ WHERE c.id IS NULL;
+```
+
+<div style="overflow-x: auto; white-space: nowrap;">
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>first_name</th>
+<th>country</th>
+<th>score</th>
+<th>order_id</th>
+<th>customer_id</th>
+<th>order_date</th>
+<th>sales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>Martin</td>
+<td>Germany</td>
+<td>500</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Peter</td>
+<td>USA</td>
+<td>0</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>1004</td>
+<td>6</td>
+<td>2021-08-31</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+</div>
+
