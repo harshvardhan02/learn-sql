@@ -13,44 +13,40 @@ ON id = customer_id;
 <tr>
 <th>id</th>
 <th>first_name</th>
-<th>country</th>
-<th>score</th>
 <th>order_id</th>
-<th>customer_id</th>
-<th>order_date</th>
 <th>sales</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td>Alice</td>
-<td>USA</td>
-<td>85</td>
-<td>101</td>
-<td>1</td>
-<td>2024-01-05</td>
-<td>500</td>
+<td>Maria</td>
+<td>1001</td>
+<td>35</td>
 </tr>
 <tr>
-<td>1</td>
-<td>Alice</td>
-<td>USA</td>
-<td>85</td>
-<td>102</td>
-<td>1</td>
-<td>2024-02-10</td>
-<td>900</td>
+<td>2</td>
+<td>John</td>
+<td>1002</td>
+<td>15</td>
 </tr>
 <tr>
 <td>3</td>
-<td>Charlie</td>
-<td>UK</td>
-<td>92</td>
-<td>103</td>
-<td>3</td>
-<td>2024-01-20</td>
-<td>200</td>
+<td>Georg</td>
+<td>1003</td>
+<td>20</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Martin</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Peter</td>
+<td>NULL</td>
+<td>NULL</td>
 </tr>
 </tbody>
 </table>
@@ -67,6 +63,11 @@ FROM customers
 INNER JOIN orders
 ON id = customer_id;
 ```
+| id | first_name | sales |
+| -- | ---------- | ----- |
+| 1  | Maria      | 35    |
+| 2  | John       | 15    |
+| 3  | Georg      | 20    |
 
 ### We have to tell sql that which column is coming from which table. Example
 
@@ -108,7 +109,107 @@ ON c.id = o.customer_id;
 ```
 | id | first_name | order_id | sales |
 | -- | ---------- | -------- | ----- |
-| 1  | Alice      | 101      | 500   |
-| 1  | Alice      | 102      | 900   |
-| 2  | Bob        | NULL     | NULL  |
-| 3  | Charlie    | 103      | 200   |
+| 1  | Maria      | 1001     | 35    |
+| 2  | John       | 1002     | 15    |
+| 3  | Georg      | 1003     | 20    |
+| 4  | Martin     | NULL     | NULL  |
+| 5  | Peter      | NULL     | NULL  |
+
+---
+
+# Right Join
+---
+```sql
+SELECT 
+  c.id,
+  c.first_name,
+  o.order_id,
+  o.sales
+FROM customers AS c
+RIGHT JOIN orders AS o
+ON c.id = o.customer_id;
+```
+| id   | first_name | order_id | sales |
+| ---- | ---------- | -------- | ----- |
+| 1    | Maria      | 1001     | 35    |
+| 2    | John       | 1002     | 15    |
+| 3    | Georg      | 1003     | 20    |
+| NULL | NULL       | 1004     | 10    |
+
+---
+
+# Full Join
+
+```sql
+SELECT 
+  c.id,
+  c.first_name,
+  o.order_id,
+  o.sales
+FROM customers c
+LEFT JOIN orders o
+ ON c.id = o.customer_id
+
+UNION
+
+SELECT
+  c.id,
+  c.first_name,
+  o.order_id,
+  o.sales
+FROM customers c
+RIGHT JOIN orders o
+ ON c.id = o.customer_id;
+```
+
+| id   | first_name | order_id | sales |
+| ---- | ---------- | -------- | ----- |
+| 1    | Maria      | 1001     | 35    |
+| 2    | John       | 1002     | 15    |
+| 3    | Georg      | 1003     | 20    |
+| 4    | Martin     | NULL     | NULL  |
+| 5    | Peter      | NULL     | NULL  |
+| NULL | NULL       | 1004     | 10    |
+
+---
+
+# ✅ Query (LEFT ANTI JOIN)
+
+<div style="overflow-x: auto; white-space: nowrap;">
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>first_name</th>
+<th>country</th>
+<th>score</th>
+<th>order_id</th>
+<th>customer_id</th>
+<th>order_date</th>
+<th>sales</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>Martin</td>
+<td>Germany</td>
+<td>500</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Peter</td>
+<td>USA</td>
+<td>0</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+</tbody>
+</table>
+</div>
