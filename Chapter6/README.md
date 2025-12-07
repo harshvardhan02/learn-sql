@@ -106,3 +106,9 @@ FROM customers AS c
 LEFT JOIN orders AS o
 ON c.id = o.customer_id;
 ```
+| id | first_name | order_id | sales |
+| -- | ---------- | -------- | ----- |
+| 1  | Alice      | 101      | 500   |
+| 1  | Alice      | 102      | 900   |
+| 2  | Bob        | NULL     | NULL  |
+| 3  | Charlie    | 103      | 200   |
