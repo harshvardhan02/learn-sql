@@ -1,4 +1,4 @@
-# Inner Join
+# ✅ Inner Join
 ---
 ### Syntax
 ```sql
@@ -94,7 +94,7 @@ INNER JOIN orders AS o
 ON c.id = o.customer_id;
 ```
 
-# Left Join
+# ✅ Left Join
 ---
 ### Syntax
 ```sql
@@ -117,7 +117,7 @@ ON c.id = o.customer_id;
 
 ---
 
-# Right Join
+# ✅ Right Join
 ---
 ```sql
 SELECT 
@@ -138,7 +138,7 @@ ON c.id = o.customer_id;
 
 ---
 
-# Full Join
+# ✅ Full Join
 
 ```sql
 SELECT 
