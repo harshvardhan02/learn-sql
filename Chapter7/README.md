@@ -9,11 +9,67 @@
 ### 5️⃣ Rule | First Query Controls Aliases
 ### 6️⃣ Rule | Mapping Correct Columns
 
-## UNION
-<svg width="220" height="120">
-  <circle cx="80" cy="60" r="50" fill="lightblue" opacity="0.6"/>
-  <circle cx="140" cy="60" r="50" fill="lightblue" opacity="0.6"/>
-  <text x="70" y="65" font-size="12">A</text>
-  <text x="145" y="65" font-size="12">B</text>
-  <text x="95" y="115" font-size="14">UNION</text>
-</svg>
+## 1. UNION
+### Removes duplicates → returns unique rows.
+
+```sql
+SELECT country AS value
+FROM customers
+UNION
+SELECT order_date AS value
+FROM orders;
+```
+
+## 2. UNION ALL
+### Keeps duplicates → returns all rows from both queries.
+
+```sql
+SELECT country AS value
+FROM customers
+UNION ALL
+SELECT order_date AS value
+FROM orders;
+```
+
+## 3. EXCEPT
+### Returns rows that appear in first query but not second.
+#### ❗ MySQL does NOT support EXCEPT — but we can simulate it with LEFT JOIN.
+
+```sql
+SELECT id, first_name
+FROM customers
+EXCEPT
+SELECT customer_id, NULL
+FROM orders;
+```
+
+#### ✔ MySQL Simulation
+
+```sql
+SELECT t1.*
+FROM table1 t1
+LEFT JOIN table2 t2
+ ON t1.col1 = t2.col1
+ AND t1.col2 = t2.col2
+WHERE t2.col1 IS NULL;
+```
+
+## 4. INTERSECT
+### Returns rows that appear in both queries.
+#### ❗ MySQL does NOT support INTERSECT — but we can simulate it.
+
+```sql
+SELECT id
+FROM customers
+INTERSECT
+SELECT customer_id
+FROM orders;
+```
+
+#### MySQL Version
+```sql
+SELECT DISTINCT c.id
+FROM customers c
+INNER JOIN orders o
+ ON c.id = o.customer_id;
+```
