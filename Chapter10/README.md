@@ -91,3 +91,40 @@ FROM orders;
 - COALESCE() evaluates arguments left to right
 
 - Return data type in COALESCE() depends on highest-precedence type
+
+---
+
+# 🧪 NULL Handling Examples
+
+## NULLIF Example
+Returns `NULL` if two expressions are equal.
+
+```sql
+SELECT NULLIF(quantity, 0) AS quantity_value
+FROM orders;
+```
+
+## ISNULL Example (SQL Server only)
+
+### Replaces NULL with a specified value.
+```sql
+SELECT ISNULL(discount, 0) AS discount_value
+FROM orders;
+```
+
+## IS NOT NULL Example
+
+### Filters rows where a column is NOT NULL.
+
+```sql
+SELECT *
+FROM customers
+WHERE email IS NOT NULL;
+```
+
+```markdown
+If you want, I can also prepare:
+- A **single-page NULL functions cheat sheet**
+- **MySQL-only equivalents**
+- **Interview-focused examples**
+```
