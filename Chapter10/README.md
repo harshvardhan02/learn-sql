@@ -94,7 +94,7 @@ FROM orders;
 
 ---
 
-# 🧪 NULL Handling Examples
+# 🧪 NULLIF Handling Examples
 
 ## NULLIF Example
 Returns `NULL` if two expressions are equal.
