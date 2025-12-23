@@ -714,3 +714,52 @@ FROM
 )t
 --WHERE ISDATE(OrderDate) = 0
 ```
+---
+
+# 📅 DATEADD Function – SQL Server & MySQL Guide
+
+## 📌 Overview
+The `DATEADD` function is used to add or subtract a specified time interval
+(days, months, years, hours, etc.) to a date or datetime value.
+
+- SQL Server supports `DATEADD()` natively
+- MySQL does NOT support `DATEADD()`
+- MySQL uses `DATE_ADD()` and `DATE_SUB()` instead
+
+---
+
+## 🧩 Syntax
+
+### SQL Server
+```sql
+DATEADD(datepart, number, date)
+```
+
+```sql
+DATE_ADD(date, INTERVAL value unit)
+```
+
+| Parameter      | Description                              |
+| -------------- | ---------------------------------------- |
+| datepart       | Time unit (year, month, day, hour, etc.) |
+| number / value | Number of units to add                   |
+| date           | Date or datetime column                  |
+
+
+| Time Unit | SQL Server | MySQL   |
+| --------- | ---------- | ------- |
+| Year      | year       | YEAR    |
+| Quarter   | quarter    | QUARTER |
+| Month     | month      | MONTH   |
+| Week      | week       | WEEK    |
+| Day       | day        | DAY     |
+| Hour      | hour       | HOUR    |
+| Minute    | minute     | MINUTE  |
+| Second    | second     | SECOND  |
+
+| Task          | SQL Server              | MySQL                            |
+| ------------- | ----------------------- | -------------------------------- |
+| Add days      | DATEADD(day, n, date)   | DATE_ADD(date, INTERVAL n DAY)   |
+| Subtract days | DATEADD(day, -n, date)  | DATE_SUB(date, INTERVAL n DAY)   |
+| Add months    | DATEADD(month, n, date) | DATE_ADD(date, INTERVAL n MONTH) |
+| Add years     | DATEADD(year, n, date)  | DATE_ADD(date, INTERVAL n YEAR)  |
