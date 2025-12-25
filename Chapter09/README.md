@@ -1,5 +1,17 @@
 # Date and Time Function
 
+| Function  | SQL Server | MySQL |
+| --------- | ---------- | ----- |
+| DATEPART  | ✅          | ❌     |
+| DATENAME  | ✅          | ❌     |
+| DATETRUNC | ✅          | ❌     |
+| FORMAT    | ✅          | ❌     |
+| CONVERT   | ✅          | ❌     |
+| CAST      | ✅          | ✅     |
+| DATEADD   | ✅          | ❌     |
+| DATEDIFF  | ✅          | ✅     |
+| ISDATE    | ✅          | ❌     |
+
 ### Fetch Date Month Year, DATEPART
 Example for SQL Server
 ```sql
