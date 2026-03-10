@@ -3,7 +3,7 @@
 1️⃣ Example query to create table.
 ```sql
 CREATE TABLE persons (
-	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, -- AUTO_INCREMENT () will create sys gen id.
+	id INT AUTO_INCREMENT PRIMARY KEY, -- AUTO_INCREMENT () will create sys gen id.
   person_name VARCHAR(50) NOT NULL,
   birth_date DATE,
   phone VARCHAR(15) NOT NULL
