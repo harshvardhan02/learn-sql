@@ -2,7 +2,7 @@
 
 ## 🔑 Common SQL Aggregate Functions
 - `COUNT()` → Counts rows
-- `SUM()` → Calculates average
+- `SUM()` → Adds values
 - `AVG()` → Calculates average
 - `MIN()` → Finds smallest value
 - `MAX()` → Finds largest value
