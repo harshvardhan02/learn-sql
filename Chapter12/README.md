@@ -1,11 +1,11 @@
 # 📊 SQL Aggregate Functions
 
 ## 🔑 Common SQL Aggregate Functions
-`COUNT()` → Counts rows
-`SUM()` → Calculates average
-`AVG()` → Calculates average
-`MIN()` → Finds smallest value
-`MAX()` → Finds largest value
+- `COUNT()` → Counts rows
+- `SUM()` → Calculates average
+- `AVG()` → Calculates average
+- `MIN()` → Finds smallest value
+- `MAX()` → Finds largest value
 
 ```sql
 SELECT
