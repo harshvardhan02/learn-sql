@@ -2,7 +2,7 @@
 
 SQL Aggregate Functions are used to perform calculations on a set of values and return a single value.
 
-These functions are commonly used with the GROUP BY clause to summarize data.
+These functions are commonly used with the `GROUP BY` clause to summarize data.
 
 ## 🔑 Common SQL Aggregate Functions
 - `COUNT()` → Counts rows
