@@ -6,10 +6,10 @@ It is used to retrieve data that will be used by the main query.
 
 Subqueries are extremely useful for:
 
--- 📊 Filtering data
--- 🧠 Performing multi-step queries
--- 🔎 Comparing values
--- 📈 Data analysis
+- 📊 Filtering data
+- 🧠 Performing multi-step queries
+- 🔎 Comparing values
+- 📈 Data analysis
 
 
 ### 🧠 Basic Syntax

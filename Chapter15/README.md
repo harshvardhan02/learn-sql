@@ -4,10 +4,10 @@
 
 These functions are extremely useful for:
 
-📈 Trend analysis
-📊 Comparing rows
-🔁 Finding previous or next values
-💹 Calculating differences between rows
+- 📈 Trend analysis
+- 📊 Comparing rows
+- 🔁 Finding previous or next values
+- 💹 Calculating differences between rows
 
 Both functions use the `OVER()` clause.
 

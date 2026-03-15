@@ -6,9 +6,9 @@ The `COUNT()` Window Function is used to count rows without grouping them into a
 
 Unlike `GROUP BY`, Window Functions:
 
-✅ Keep all original rows
-✅ Add calculated values beside each row
-✅ Work using the `OVER()` clause
+- ✅ Keep all original rows
+- ✅ Add calculated values beside each row
+- ✅ Work using the `OVER()` clause
 
 ### 🧠 Basic Syntax
 ```sql

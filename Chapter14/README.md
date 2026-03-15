@@ -4,10 +4,10 @@ Window Ranking Functions in SQL assign a rank or position to rows within a resul
 
 These functions are extremely useful when you want to:
 
-📊 Rank data
-🥇 Find top performers
-🔢 Generate row numbers
-🧠 Handle ties differently depending on the function used
+- 📊 Rank data
+- 🥇 Find top performers
+- 🔢 Generate row numbers
+- 🧠 Handle ties differently depending on the function used
 
 All ranking functions use the `OVER()` clause.
 
