@@ -3,10 +3,10 @@ A Common Table Expression (CTE) is a temporary result set that you can reference
 
 CTEs make queries:
 
--- 📖 More readable
--- 🧠 Easier to maintain
--- 🔁 Reusable within the same query
--- 🚀 Better structured than complex subqueries
+- 📖 More readable
+- 🧠 Easier to maintain
+- 🔁 Reusable within the same query
+- 🚀 Better structured than complex subqueries
 
 CTEs are defined using the `WITH` keyword.
 
